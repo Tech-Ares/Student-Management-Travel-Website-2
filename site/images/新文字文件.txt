@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mid.lt263.com/mb</title>
+<style type="text/css">
+
+#imgmenu{
+		width: 450px;
+		height: 25px; /*高度是背景圖片的一半*/
+		background: url(/uploads/divcss/n2007115235458.gif);
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+}
+#imgmenu li{
+		float: left;
+}
+#imgmenu li a{
+		display: block;
+		width: 90px;
+		height: 25px;
+}
+#imgmenu li#home a:hover,#activeh{
+		background: url(/uploads/divcss/n2007115235458.gif) 0 -25px; 
+		/*翻轉時背景圖的位置，左邊0px，頂部-25px,
+		背景圖的下半部分，下同*/
+}
+#imgmenu li#about a:hover,#activea{
+		background: url(/uploads/divcss/n2007115235458.gif) -90px -25px;
+		/*第二個菜單的位置距左邊90px，
+		每個菜單的寬度是90px*/
+}
+#imgmenu li#pro a:hover,#activep{
+		background: url(/uploads/divcss/n2007115235458.gif) -180px -25px;
+}
+#imgmenu li#faq a:hover,#activef{
+		background: url(/uploads/divcss/n2007115235458.gif) -270px -25px;
+}
+#imgmenu li#contact a:hover,#activec{
+		background: url(/uploads/divcss/n2007115235458.gif) -360px -25px;
+}
+
+</style>
+</head>
+<body>
+  <ul id="imgmenu">
+	<li id="activeh"><a href="#"></li>
+	<li id="about"><a href="#"></li>
+	<li id="pro"><a href="#"></li>
+	<li id="faq"><a href="#"></li>
+	<li id="contact"><a href="#"></li>
+	</ul>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<LINK HREF="style.css" TYPE="text/css" REL="stylesheet">
+
+</HEAD>
+<BODY>
+
+<table  cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td  style="width:766px; height:780px">
+		<table  cellspacing="0" cellpadding="0">
+		  <tr>
+			<td  style="width:42px; height:780px"></td>
+			<td  style="width:676px; height:780px">
+				<table  cellspacing="0" cellpadding="0">
+				  <tr>
+					<td  style="width:676px; height:119px; background-image: url(images/grey_bg.gif); background-repeat:no-repeat">
+						<table  cellspacing="0" cellpadding="0">
+						  <tr>
+							<td  style="width:560px; height:119px">
+								<br style="line-height:48px">
+								<img src="images/c_name.gif" alt="" hspace="3">
+							</td>
+							<td  style="width:116px; height:119px">
+								<br style="line-height:66px"></td>
+						  </tr>
+						</table>
+					</td>
+				  </tr>
+				   <tr>
+					<td  style="width:676px; height:563px">
+						<table  cellspacing="0" cellpadding="0">
+						  <tr>
+							<td  style="width:226px; height:563px">
+								<a href="index.html"><img src="images/back.gif" alt="" border="0"></a><img src="images/pic1_1.gif" alt=""><br>
+								<img src="images/pic1_2.gif" alt=""><br>
+								<a href="index-2.html"><img src="images/comp.gif" alt="" border="0"></a><a href="index-3.html"><img src="images/srv.gif" alt="" border="0"></a><br>
+								<a href="index-4.html"><img src="images/sol.gif" alt="" border="0"></a><a href="index-5.html"><img src="images/cont.gif" alt="" border="0"></a><br> </td>
+							<td  style="width:450px; height:563px; background-color:#F8F8F8; background-image:url(images/top.gif); background-repeat:no-repeat">
+								<table  cellspacing="0" cellpadding="0">
+								  <tr>
+									<td  style="width:450px; height:563px; background-image:url(images/bottom.gif); background-repeat:no-repeat; background-position: left bottom">
+									 <script language="JavaScript">
+<!--
+Image0=new Image();
+Image0.src="http://home.educities.edu.tw/nkhs9323005/gif0477.gif";
+Amount=20; 
+Ymouse=-50;
+Xmouse=-50;
+Ypos=new Array();
+Xpos=new Array();
+Speed=new Array();
+rate=new Array();
+grow=new Array();
+Step=new Array();
+Cstep=new Array();
+nsSize=new Array();
+ns=(document.layers)?1:0;
+(document.layers)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+Ymouse=(document.layers)?evnt.pageY-20:event.y-20;
+Xmouse=(document.layers)?evnt.pageX:event.x;
+}
+(document.layers)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+for (i=0; i < Amount; i++){                                                                
+Ypos[i]=Ymouse;
+Xpos[i]=Xmouse;
+Speed[i]=Math.random()*4+1;
+Cstep[i]=0;
+Step[i]=Math.random()*0.1+0.05;
+grow[i]=8;
+nsSize[i]=Math.random()*15+5;
+rate[i]=Math.random()*0.5+0.1;
+}
+if (ns){
+for (i = 0; i < Amount; i++){
+document.write("<LAYER NAME='sn"+i+"' LEFT=0 TOP=0><img src="+Image0.src+" name='N' width="+nsSize[i]+" height="+nsSize[i]+"></LAYER>");
+}
+}
+else{
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i = 0; i < Amount; i++){
+document.write('<img id="si" src="'+Image0.src+'" style="position:absolute;top:0px;left:0px;filter:alpha(opacity=90)">');
+}
+document.write('</div></div>');
+}
+function MouseBubbles(){
+var hscrll=(document.layers)?window.pageYOffset:document.body.scrollTop;
+var wscrll=(document.layers)?window.pageXOffset:document.body.scrollLeft;
+for (i=0; i < Amount; i++){
+sy = Speed[i]*Math.sin(270*Math.PI/180);
+sx = Speed[i]*Math.cos(Cstep[i]*4);
+Ypos[i]+=sy;
+Xpos[i]+=sx; 
+if (Ypos[i] < -40){
+Ypos[i]=Ymouse;
+Xpos[i]=Xmouse;
+Speed[i]=Math.random()*6+4;
+grow[i]=8;
+nsSize[i]=Math.random()*15+5;
+}
+if (ns){
+document.layers['sn'+i].left=Xpos[i]+wscrll;
+document.layers['sn'+i].top=Ypos[i]+hscrll;
+}
+else{
+si[i].style.pixelLeft=Xpos[i]+wscrll;
+si[i].style.pixelTop=Ypos[i]+hscrll;
+si[i].style.width=grow[i];
+si[i].style.height=grow[i]; 
+}
+grow[i]+=rate[i]; 
+Cstep[i]+=Step[i];
+if (grow[i] > 24) grow[i]=25;
+}
+setTimeout('MouseBubbles()',10);
+}
+MouseBubbles();
+-->
+</script>
+
+
+<br style="line-height:31px">
+										<img src="images/title7.gif" alt="" style="margin-left:29px"><br>
+										<div style="margin-left:30px">
+								<a href="rainbow2.jpg"><img src="rainbow.jpg" align="center" alt="七彩摩天輪"></a><a href="index-8.html" class="a"> 更多資訊</a><a href="rainbow2.jpg"><br style="line-height:8px">
+								</a>
+										  <br>
+									  </div>
+										
+									
+									</td>
+								  </tr>
+								</table>
+							</td>
+						  </tr>
+						</table>
+					</td>	
+				  </tr>
+				   <tr>
+					<td  style="width:676px; height:98px" class="policy">
+					<br style="line-height:45px">
+					YourCompany.Com &copy; 2006 <img src="images/img.gif" alt=""> <a href="index-6.html">Privacy Policy</a>					</td>
+				  </tr>
+				</table>
+			</td>
+			<td  style="width:48px; height:780px"></td>
+		  </tr>
+		</table>
+	</td>
+  </tr>
+</table>
+</BODY>
+</HTML>
+
+									
+								
+		
+				

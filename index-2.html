@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<LINK HREF="style.css" TYPE="text/css" REL="stylesheet">
+
+</HEAD>
+<BODY>
+
+<table  cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td  style="width:766px; height:780px">
+		<table  cellspacing="0" cellpadding="0">
+		  <tr>
+			<td  style="width:42px; height:780px"></td>
+			<td  style="width:676px; height:780px">
+				<table  cellspacing="0" cellpadding="0">
+				  <tr>
+					<td  style="width:676px; height:563px">
+						<table  cellspacing="0" cellpadding="0">
+						  <tr>
+							<td width="226"  style="width:226px; height:563px">
+								<a href="index.html"><img src="images/back.gif" alt="" border="0"></a><img src="images/pic2_1.gif" alt=""><br>
+								<img src="images/pic2_2.gif" alt=""><br>
+								<a href="index-2.html"><img src="images/comp.gif" alt="" border="0"></a><a href="index-3.html"><img src="images/srv.gif" alt="" border="0"></a><br>
+								<a href="index-4.html"><img src="images/sol.gif" alt="" border="0"></a><a href="index-5.html"><img src="images/cont.gif" alt="" border="0"></a><br> </td>
+							<td width="512"  style="width:450px; height:563px; background-color:#F8F8F8; background-image:url(images/top.gif); background-repeat:no-repeat">
+								<table  cellspacing="0" cellpadding="0">
+								  <tr>
+									<td height="833"  style="width:450px; height:563px; background-image:url(images/bottom.gif); background-repeat:no-repeat; background-position: left bottom">
+									  <p><script language="JavaScript">
+dCol='0000ff';
+fCol='ff00ff';
+sCol='ff0000';
+mCol='ffff00';
+hCol='00ff00';  
+ClockHeight=60;
+ClockWidth=45;
+ClockFromMouseY=0;
+ClockFromMouseX=100;
+d=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+m=new Array("今天是一月","今天是二月","今天是三月","今天是四月","今天是五月","今天是六月","今天是七月","今天是八月","今天是九月","今天是十月","今天是十一月","今天是十二月");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900; 
+TodaysDate="年 "+"li.net時間播報 "+m[date.getMonth()]+day+"日"+" "+d[date.getDay()]+" "+year;
+D=TodaysDate.split('');
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+Face='1 2 3 4 5 6 7 8 9 10 11 12';
+font='Arial';
+size=1;
+speed=0.7;//
+ns=(document.layers);
+ie=(document.all);
+Face=Face.split(' ');
+n=Face.length; 
+a=size*10;
+ymouse=0;
+xmouse=0;
+scrll=0;
+props="<font face="+font+" size="+size+" color="+fCol+">";
+props2="<font face="+font+" size="+size+" color="+dCol+">";
+Split=360/n;
+Dsplit=360/D.length;
+HandHeight=ClockHeight/4.5
+HandWidth=ClockWidth/4.5
+HandY=-7;
+HandX=-2.5;
+scrll=0;
+step=0.06;
+currStep=0;
+y=new Array();x=new Array();Y=new Array();X=new Array();
+for (i=0; i < n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0}
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array();
+for (i=0; i < D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0}
+if (ns){
+for (i=0; i < D.length; i++)
+document.write('<layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+D[i]+'</font></center></layer>');
+for (i=0; i < n; i++)
+document.write('<layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+Face[i]+'</font></center></layer>');
+for (i=0; i < S.length; i++)
+document.write('<layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+sCol+'><center><b>'+S[i]+'</b></center></font></layer>');
+for (i=0; i < M.length; i++)
+document.write('<layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+mCol+'><center><b>'+M[i]+'</b></center></font></layer>');
+for (i=0; i < H.length; i++)
+document.write('<layer name=nsHours'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+hCol+'><center><b>'+H[i]+'</b></center></font></layer>');
+}
+if (ie){
+document.write('<div id="Od" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < D.length; i++)
+document.write('<div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+D[i]+'</font></div>');
+document.write('</div></div>');
+document.write('<div id="Of" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+Face[i]+'</font></div>');
+document.write('</div></div>');
+document.write('<div id="Oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++)
+document.write('<div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center;font-weight:bold">'+H[i]+'</div>');
+document.write('</div></div>');
+document.write('<div id="Om" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++)
+document.write('<div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center;font-weight:bold">'+M[i]+'</div>');
+document.write('</div></div>')
+document.write('<div id="Os" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++)
+document.write('<div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center;font-weight:bold">'+S[i]+'</div>');
+document.write('</div></div>')
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY;
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX;
+}
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+function ClockAndAssign(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360;
+if (ie){
+Od.style.top=window.document.body.scrollTop;
+Of.style.top=window.document.body.scrollTop;
+Oh.style.top=window.document.body.scrollTop;
+Om.style.top=window.document.body.scrollTop;
+Os.style.top=window.document.body.scrollTop;
+}
+for (i=0; i < n; i++){
+var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style; 
+F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll;
+F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180);
+}
+for (i=0; i < H.length; i++){
+var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style;
+HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll;
+HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs);
+}
+for (i=0; i < M.length; i++){
+var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style;
+ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll;
+ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min);
+}
+for (i=0; i < S.length; i++){
+var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style;
+SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll;
+SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec);
+}
+for (i=0; i < D.length; i++){
+var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style; 
+DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll;
+DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180);
+}
+currStep-=step;
+}
+function Delay(){
+scrll=(ns)?window.pageYOffset:0;
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed);
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed);
+for (i=1; i < D.length; i++){
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed);
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed);
+}
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+}
+ClockAndAssign();
+setTimeout('Delay()',60);
+}
+if (ns||ie)window.onload=Delay;
+//-->
+</script>
+<br style="line-height:30px">
+								      <span class="a"><span class="a"><span class="a"><span class="a">公司簡介：</span></span></span></span></p>
+<p>白蘭旅行社成立於三疊紀，與恐龍是在同一時期，位於黃岩島的精華<br>
+地段，整座島的正中央，是全球最古老的旅行社，成立以來一直秉持<br>
+「不照規範 一再創新  」的理念。<br>
+<br>
+白蘭走過N世紀，搞怪傳承經營下屢獲業界「金質神經病獎」、「百大優良討喜企業」、「搞怪第壹大獎 」、「旅遊菁鑽獎」 等獎項以及通過ISO090001認證，絕對是全球第一旅行社。<img src="images/px2_1.gif" alt="" style="margin-left:29px; margin-top:20px"><br>
+<span class="a"><br><strong class="a">經營理念：</strong></span> </p>
+<ul>
+ <li>提供神經質的行程企劃與貼到心坎裡的服務，讓每一位顧客都有受寵若驚的感受。 </li>
+ <li>以顧客為導向，滿足您的需求，體貼著每一位貴賓的心。 </li>
+ <li>超Kuso專業旅遊諮詢顧問，提供您看似詳盡又讓人一頭霧水的旅遊資訊。 </li>
+ <li>規劃閱讀黃岩島~自然人文旅行路線，提供知性.深度的主題性旅遊。 </li>
+ <li>所以「我們搞怪 &nbsp;您們驚恐」，是白蘭全體同仁的最高服務宗旨。 </li>
+</ul>
+<p><img src="images/px2_1.gif" alt="" style="margin-left:29px; margin-top:20px"><br>
+  <span class="a"><br>
+  <strong class="a">頂尖團隊</strong>：</span>
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/x_IovYalw1U" frameborder="0" allowfullscreen></iframe>
+  <br>
+</p>
+<table width="550" border="1" cellspacing="5">
+  <tr>
+    <td width="94">&nbsp;</td>
+    <td colspan="2">人員</td>
+    <td width="246" class="b">簡易介紹</td>
+  </tr>
+  <tr>
+    <td><p>白蘭艦</p>
+      <p>艦長</p></td>
+    <td width="103"><img src="images/pp/20130612_155024.gif" width="100" height="100"></td>
+    <td width="64"><p>全體</p></td>
+    <td>全島官階最高的海軍上將，無論任何艦艇都能指揮的如魚得水。</td>
+  </tr>
+  <tr>
+    <td><p>白蘭艦</p>
+      <p>副艦長</p></td>
+    <td><img src="images/pp/2013-06-12_12-25-51_889.gif" width="100" height="100"></td>
+    <td><p>司徒漢權</p></td>
+    <td>擁有英俊的臉龐，迷倒一堆旅客，尤其是那會心一笑，比艦砲Mk74飛彈射控系統還要厲害。</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p>白蘭艦</p>
+      <p>砲長</p>
+      <p>副砲長</p></td>
+    <td><img src="images/pp/179800_164632523588987_8109336_n.gif" width="100" height="100"></td>
+    <td><p>&nbsp;</p>
+      <p>雷修齊</p></td>
+    <td rowspan="2">本島最強的炮長，只要跟炮有關西的無所不知，連嘴炮和打炮都一流的。</td>
+  </tr>
+  <tr>
+  	<td><img src="images/pp/1234567890.jpg" width="100" height="100"></td>
+    <td>周祥鈺</td>
+  </tr>
+  <tr>
+    <td><p>白蘭艦</p>
+      <p>補給長</p></td>
+    <td><img src="images/pp/aaa.gif" width="100" height="100"></td>
+    <td>徐浩嚴</td>
+    <td>航行途中，有任何問題，補給長都能給你最好的服務，只要你想要....嘿嘿</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p>黑鷹攻擊</p>
+      <p>直升機</p>
+      <p>飛行員</p></td>
+    <td><img src="images/pp/2013-06-12_12-25-28_408.gif" width="100" height="100"></td>
+    <td><p>黃欽裕<br>
+    </p></td>
+    <td rowspan="2">全島唯一兩位飛行員，擁有多種飛行執照，任何空中花式表演，都難不倒。</td>
+  </tr>
+  <tr>
+    <td><img src="images/pp/345.gif" width="100" height="100"></td>
+    <td>吳俊賢</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p>博物館</p>
+      <p>導覽員</p></td>
+    <td><img src="images/pp/2013-06-12_12-25-15_288.gif" width="100" height="100"></td>
+    <td><p>曾麟鈞<br>
+    </p></td>
+    <td rowspan="2">上知天文，下知地理，無所不知，只要能問倒他們，所有行程免費招待，歡迎你挑戰。</td>
+  </tr>
+  <tr>
+    <td><img src="images/pp/sss.gif" width="100" height="100"></td>
+    <td>石佩凡</td>
+  </tr>
+  <tr>
+    <td rowspan="3"><p>黃岩島</p>
+      <p>導覽員</p></td>
+    <td><img src="images/pp/484014_470091076349334_93193255_n.gif" width="100" height="100"></td>
+    <td><p>林明莉<br>
+      <br>
+    </p></td>
+    <td rowspan="3">三朵阿花有本島的S.H.E之稱，島上的任何景點瞭如指掌，只要你想聽歌，現場給你天籟美聲的享受。</td>
+  </tr>
+  <tr>
+    <td><img src="images/pp/未命名-3.gif" width="100" height="100"></td>
+    <td>黃彩庭</td>
+  </tr>
+  <tr>
+    <td><img src="images/pp/2013-06-12_12-28-43_679.gif" width="100" height="100"></td>
+    <td>孫宛筠</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p>水上活動</p>
+      <p>專員</p></td>
+    <td><img src="images/pp/2013-06-12_12-26-44_781.gif" width="100" height="100"></td>
+    <td rowspan="2"><p>江貞逸<br>
+      林佩萱</p></td>
+    <td rowspan="2">海上姐妹花，兩人均擁有職業淺水執照，能夠帶你觀賞海底的特別海景以及恐龍的化石。</td>
+  </tr>
+  <tr>
+    <td><img src="images/pp/2013-06-12_12-26-28_249.gif" width="100" height="100"></td>
+  </tr>
+</table>
+<p>&nbsp;</p></td>
+								  </tr>
+								</table>
+							</td>
+						  </tr>
+						</table>
+					</td>	
+				  </tr>
+				   <tr>
+					<td  style="width:676px; height:98px" class="policy">
+					<br style="line-height:45px"></td>
+				  </tr>
+				</table>
+			</td>
+			<td  style="width:48px; height:780px"></td>
+		  </tr>
+		</table>
+	</td>
+  </tr>
+</table>
+</BODY>
+</HTML>
+
+									
+								
+		
+				
